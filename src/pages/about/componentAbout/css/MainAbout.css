@@ -1,0 +1,142 @@
+/* DetailBog */
+
+h1, p, span, a{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a, a:hover{
+    text-decoration: none;
+    transition: .5s;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: #514646;
+}
+
+.container_custom .container .right-content .main-content .intro-form-contact h1{
+    font-weight: bold;
+    color: #514646;
+}
+
+/* The container */
+.wrap-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.wrap-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.wrap-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.wrap-checkbox input:checked ~ .checkmark {
+    background-color: #FFE3E3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.wrap-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.wrap-checkbox .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 9px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+@media only screen and (min-width: 1199px) {
+    .container_custom .container .right-content .main-content .about-me .title-about-me, .container_custom .container .right-content .main-content .about-writer .title-about-writer{
+        font-size: 26px;
+    }
+
+    .container_custom .container .right-content .main-content .about-me .detail-about-me, .container_custom .container .right-content .main-content .about-writer .detail-about-writer{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (min-width: 989px) and (max-width: 1199px) {
+    .container_custom .container .right-content .main-content .about-me .title-about-me, .container_custom .container .right-content .main-content .about-writer .title-about-writer{
+        font-size: 26px;
+    }
+
+    .container_custom .container .right-content .main-content .about-me .detail-about-me, .container_custom .container .right-content .main-content .about-writer .detail-about-writer{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 989px) {
+    .container_custom .container .right-content .main-content .about-me .title-about-me, .container_custom .container .right-content .main-content .about-writer .title-about-writer{
+        font-size: 26px;
+    }
+
+    .container_custom .container .right-content .main-content .about-me .detail-about-me, .container_custom .container .right-content .main-content .about-writer .detail-about-writer{
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen and (max-width: 765px) {
+    .container_custom .container .right-content .main-content .about-me .title-about-me, .container_custom .container .right-content .main-content .about-writer .title-about-writer{
+        font-size: 26px;
+    }
+    
+    .container_custom .container .right-content .main-content .about-me .detail-about-me, .container_custom .container .right-content .main-content .about-writer .detail-about-writer{
+        font-size: 14px;
+    }
+
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 5px 15px;
+  /*border: 1px solid red;*/
+}

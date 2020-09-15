@@ -1,0 +1,37 @@
+import React, { Fragment } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PrimaryTagline from '../../components/PrimaryTagline/PrimaryTagline';
+import '../../js/jquery-loader';
+import $ from 'jquery/dist/jquery.min.js';
+import MainCategory from './componentCategory/MainCategory';
+
+class Category extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
+    componentDidMount(){
+        if(this.props.location.pathname == '/category'){
+            $('a.category').addClass('active')
+            $('a.home').removeClass('active')
+            $('a.contact').removeClass('active')
+
+            // if window at not top
+            var distance = String ($(window).scrollTop());
+            if(distance > 0){
+                $("html, body").animate({ scrollTop: Number ($('div.main-content').offset().top) - 70 }, 1500, 'swing');
+            }
+        }
+    }
+    
+    render(){
+        return (
+            <Fragment>
+                <PrimaryTagline />
+                <MainCategory />
+            </Fragment>
+        )
+    }
+}
+
+export default Category;
